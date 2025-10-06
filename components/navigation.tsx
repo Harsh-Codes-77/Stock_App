@@ -1,8 +1,6 @@
 'use client'
 
 import { NAV_ITEMS } from '@/lib/constants';
-
-// import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -15,6 +13,7 @@ const NavItems = () => {
         return pathname.startsWith(path);
     }
     return (
+        
         <ul className="flex flex-col sm:flex-row p-2 gap-3 sm:gap-10 font-medium">
             {NAV_ITEMS.map(({ href, label }) => (
                 <li key={href}>

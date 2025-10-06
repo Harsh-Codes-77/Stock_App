@@ -5,7 +5,9 @@ import NavItems from './navigation';
 import UserDropDown from './UserDropdown';
 
 const Header = () => {
+
     return (
+        
         <header className="sticky top-0 header">
             <div className="container header-wrapper">
                 <Link href="/">

@@ -8,13 +8,16 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { LogOut } from "lucide-react";
 import NavItems from "./navigation";
 
 const UserDropDown = () => {
+    
     const router = useRouter();
     const handleSignOut = async () => {
         router.push("/sign-in");

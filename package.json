@@ -21,6 +21,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
+    "debounce": "^2.2.0",
     "dotenv": "^17.2.3",
     "ingest": "^1.0.0",
     "inngest": "^3.44.2",

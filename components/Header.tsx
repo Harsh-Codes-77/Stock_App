@@ -3,8 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import NavItems from './navigation';
 import UserDropDown from './UserDropdown';
+import { searchStocks } from '@/lib/actions/finnhub.actions';
 
-const Header = ( {user}: { user: User } ) => {
+const Header = async( {user}: { user: User } ) => {
+
+    const initialStocks = await searchStocks();
 
     return (
         
@@ -14,9 +17,9 @@ const Header = ( {user}: { user: User } ) => {
                     <Image src="/public/assets/icons/logo.svg" alt="Signalist logo" width={140} height={32} className="h-8 w-auto cursor-pointer" />
                 </Link>
                 <nav className="hidden sm:block">
-                    <NavItems />
+                    <NavItems initialStocks={initialStocks}/>
                 </nav>
-                <UserDropDown user={user} />
+                <UserDropDown user={user} initialStocks={initialStocks} />
             </div>
         </header>
     );
